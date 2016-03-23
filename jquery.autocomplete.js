@@ -642,7 +642,7 @@
 		$box
 			.css({
 				'display':$input.css('display'),
-				'width':$input.css('width')
+				// 'width':$input.css('width')
 			});
 		
 		if( options.style )
@@ -874,7 +874,7 @@
 				timerUpdate = setTimeout(function(){
 					$box.css({
 						'display':$input.css('display'),
-						'width':$input.css('width')
+						// 'width':$input.css('width')
 					});
 					$dropdown.css($.extend(true,{
 						left:$input.position().left,
