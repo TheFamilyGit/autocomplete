@@ -973,7 +973,7 @@
 		
 		$(window).on('resize',function () {
 			$box.css({
-				'width':'auto'
+				'width':'100%'
 			});
 			$input
 				.trigger('updateHelperPosition.xdsoft');
