@@ -732,7 +732,13 @@
 					}
 					return true;
 				case TAB:
-				return true;
+					if (iOpen) {
+						$input.trigger('pick.xdsoft');
+						event.preventDefault();
+						return false;
+					} else {
+						return true;
+					}
 				case ENTER:
 					if (iOpen) {
 						$input.trigger('pick.xdsoft');
@@ -825,7 +831,7 @@
 					setCaretPosition($input[0],$input.val().length);
 				}
 			})
-			.on('keydown.xdsoft input.xdsoft cut.xdsoft paste.xdsoft', function( event ){
+			.on('keydown.xdsoft keypress.xdsoft input.xdsoft cut.xdsoft paste.xdsoft', function( event ){
 				var ret = manageKey(event);
 				
 				if (ret === false || ret === true) {
